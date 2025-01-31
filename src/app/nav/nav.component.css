@@ -1,9 +1,23 @@
+.navbar {
+    background-color: #78aac3; /* Navbar background color */
+}
+
 .nav-link {
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for color and background */
-  }
-  
-  .nav-link:hover {
-    color: #007bff; /* Change this to your desired hover text color */
-    background-color: yellow; /* Set the background color on hover */
-    text-decoration: none; /* Keep text decoration as none */
-  }
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: #e2e8ef; /* Hover text color */
+    background-color: #9be 1ef; /* Background color on hover */
+    border-radius: 20%; /* Rounded corners on hover */
+}
+
+.btn-outline-success {
+    color: #fff; /* Button text color */
+    border-color: #fff; /* Button border color */
+}
+
+.btn-outline-success:hover {
+    background-color: #9be1ef; /* Button background on hover */
+    border-color: #9be1ef; /* Button border on hover */
+}
