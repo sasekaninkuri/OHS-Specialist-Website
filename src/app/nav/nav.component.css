@@ -1,0 +1,9 @@
+.nav-link {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for color and background */
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Change this to your desired hover text color */
+    background-color: yellow; /* Set the background color on hover */
+    text-decoration: none; /* Keep text decoration as none */
+  }
