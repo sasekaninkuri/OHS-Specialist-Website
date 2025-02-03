@@ -1,6 +1,4 @@
-.navbar {
-    background-color: #78aac3; /* Navbar background color */
-}
+
 
 .nav-link {
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
@@ -20,4 +18,52 @@
 .btn-outline-success:hover {
     background-color: #9be1ef; /* Button background on hover */
     border-color: #9be1ef; /* Button border on hover */
+}
+
+
+
+
+
+
+
+.navbar {
+    background-color: #78aac3; /* Navbar background color */
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    width: 100%; /* Full width */
+}
+.nav-link {
+    color: white; /* Link color */
+   font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #f39c12; /* Hover color for links */
+}
+
+
+.logo {
+    width: 130px; /* Logo width */
+    border-radius: 20px; /* Smooth corners */
+    object-fit: cover; /* Ensure proper image fitting */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.logo {
+    width: 130px; /* Logo width */
+    border-radius: 20px; /* Smooth corners */
+    object-fit: cover; /* Ensure proper image fitting */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
