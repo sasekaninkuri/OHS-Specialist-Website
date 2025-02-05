@@ -1,23 +1,30 @@
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="" tabindex="0">
-    <h4 id="scrollspyHeading1">
-    <!-- Header -->
-
-    <div class="w3-content w3-padding" style="max-width:1564px"></div>
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+   
     
-    <img class="w3-image" src="/assets/images/HOME-PAGE.jpeg" alt="" width="1500" height="400">
-    <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="w3-xxlarge w3-text-white"><span class=""><b></b></span>HULAHULA OHS SPECIALIST<span class="w3-hide-small w3-text-light-black"> </span></h1>
+    <div id="scrollspyHeading1">
+        <div class="image-container">
+            <img class="w3-image" src="/assets/images/safety.jpeg" alt="Safety Image" style="width: 100%; height: auto; max-height: 1200px; max-width: 1500px;">
+            <div class="overlay-text">
+                <h1 class="w3-xxlarge w3-text-white animated-title">
+                    <span><b></b></span> HULAHULA OHS SPECIALIST
+                    <span class="w3-hide-small w3-text-light-black"> </span>
+                </h1>
+            </div>
+        </div>
+         
+        <!-- Header -->
+        <div class="w3-content w3-padding" style="max-width: 1564px;"></div>
+       
+      
+        <header class="w3-display-container w3-content w3-wide" style="max-width: 1500px;" id="home">
+            <div class="w3-display-middle w3-margin-top w3-center">
+                
+            </div>
+        </header>
     </div>
-  </header>
-
-
-
-
-
-
-</h4>
         
         
     <h4 id="scrollspyHeading2">
@@ -55,7 +62,7 @@
 
 </h4>
 
-
+<h1>Services</h1>
  
     <h4 id="scrollspyHeading3">
        
@@ -127,20 +134,99 @@
 
         
       
-    <h4 id="scrollspyHeading4">
-    <p>
-        </p>
+    <h4 class="" id="scrollspyHeading4"> CONTACT 
+        <div class="picture">
+        <hr>
+        <div class="container">
+            <form action="https://formspree.io/f/mpwqrego" method="POST">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="lname">Email Address</label>
+              <input type="text" id="ename" name="email address" placeholder="Email Address..">
+
+              <label for="lname">Contact</label>
+              <input type="text" id="cname" name="Contact" placeholder="Contact..">
+          
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                  <option value="">Select your country</option>
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="germany">Germany</option>
+                  <option value="france">France</option>
+                  <option value="italy">Italy</option>
+                  <option value="spain">Spain</option>
+                  <option value="india">India</option>
+                  <option value="china">China</option>
+                  <option value="japan">Japan</option>
+                  <option value="brazil">Brazil</option>
+                  <option value="south_africa">South Africa</option>
+                  <option value="mexico">Mexico</option>
+                  <option value="new_zealand">New Zealand</option>
+                  <option value="netherlands">Netherlands</option>
+                  <option value="sweden">Sweden</option>
+                  <option value="norway">Norway</option>
+                  <option value="switzerland">Switzerland</option>
+                  <option value="singapore">Singapore</option>
+                  <option value="malaysia">Malaysia</option>
+                  <option value="philippines">Philippines</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+        </div>
 
     </h4>
 
 
 
 
-    <h4 id="scrollspyHeading5">Contact
-    <p>
-        </p>
 
-    </h4>
+
+
+    
+      
+
+
+
+
+    <h4 class="" id="scrollspyHeading5">Contact</h4>
+<div class="testimonial-container">
+    <div class="testimonial-carousel">
+        <div class="testimonial-card active">
+            <p class="testimonial-text">
+                "Working with Hulahula OHS has transformed our business. Their expertise and dedication to quality have exceeded our expectations!"
+            </p>
+            <p class="testimonial-author">— Jane Doe, CEO of Example Corp</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                "The team at Hulahula OHS is incredibly professional. They delivered our project on time and with outstanding results!"
+            </p>
+            <p class="testimonial-author">— John Smith, Marketing Director at Sample Inc</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                "I can't recommend Hulahula OHS enough! Their innovative solutions have made a significant impact on our operations."
+            </p>
+            <p class="testimonial-author">— Emily Johnson, Founder of Startup Co</p>
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
 
     <h4 id="scrollspyHeading6">Profile
     <p>

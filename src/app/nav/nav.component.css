@@ -20,6 +20,11 @@
     border-color: #9be1ef; /* Button border on hover */
 }
 
+.w3-image {
+    
+    height: 50px; /* Maintains aspect ratio */
+}
+
 
 
 
@@ -43,27 +48,21 @@
 }
 
 
-.logo {
-    width: 130px; /* Logo width */
-    border-radius: 20px; /* Smooth corners */
-    object-fit: cover; /* Ensure proper image fitting */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.3s; /* Transition for hover effect */
-}
-
-.logo:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
 
 .logo {
-    width: 130px; /* Logo width */
-    border-radius: 20px; /* Smooth corners */
-    object-fit: cover; /* Ensure proper image fitting */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.3s; /* Transition for hover effect */
+    width: 80px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and links */
+    border-radius: 5%;
+    margin-left: 9px;
+    object-fit: cover;
+   
+ 
 }
 
-.logo:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+/* Optional: make the navbar responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px; /* Adjust logo size for smaller screens */
+    }
 }
