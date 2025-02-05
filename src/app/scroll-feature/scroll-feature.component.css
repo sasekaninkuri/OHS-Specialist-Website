@@ -3,6 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+   
 }
 
 
@@ -37,13 +38,48 @@ body {
 .image-container {
     position: relative; /* Position relative for absolute positioning of text */
     max-width: 1500px; /* Limit container width */
+    width: 100%; /* Ensure the container takes full width */
+    overflow: hidden; /* Prevent overflow if image exceeds container */
 }
 
 .w3-image {
-    width: 100%; /* Full width */
+    width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
-    max-height: 1200px; /* Limit height */
+    max-height: none; /* Remove height limitation to show the full image */
+    display: block; /* Prevents bottom space caused by inline images */
+    object-fit: fill; /* Fill the container without preserving aspect ratio */
 }
+
+.text_hulula {
+    color: black;
+    font-size: 8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+}
+
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .text_hulula {
+        font-size: 5rem; /* Adjust size for tablets */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .text_hulula {
+        font-size: 3rem; /* Adjust size for mobile phones */
+        padding: 0 10px; /* Add padding for better fit */
+    }
+}
+
+/* Optional: For very small screens */
+@media (max-width: 320px) {
+    .text_hulula {
+        font-size: 2rem; /* Further reduce size for very small screens */
+    }
+}
+
 
 .overlay-text {
     position: absolute; /* Position text absolutely within the container */
@@ -52,6 +88,7 @@ body {
     transform: translate(-50%, -50%); /* Adjust for centering */
     text-align: center; /* Center text alignment */
     color: white; /* Text color */
+   
 }
 
 /* Optional: Adjust for mobile devices */
@@ -221,104 +258,64 @@ hr {
   
 
   
-
-
-  .testimonial-container {
-    position: relative;
-    max-width: 400px; /* Limit the width of the carousel */
-    margin: auto; /* Center the carousel */
-    overflow: hidden; /* Hide overflow */
-}
-
-.testimonial-carousel {
-    display: flex;
-    transition: transform 0.5s ease; /* Smooth transition */
-}
-
-.testimonial-card {
-    min-width: 100%; /* Make each card take full width */
-    box-sizing: border-box; /* Include padding and border in width */
-    padding: 20px; /* Padding inside the card */
-    text-align: center; /* Center text */
-}
-
-.testimonial-text {
-    font-size: 16px; /* Font size for the testimonial text */
-    margin-bottom: 10px; /* Space below the text */
-    font-style: italic; /* Italicize the testimonial text */
-}
-
-.testimonial-author {
-    font-weight: bold; /* Bold the author's name */
-    color: #555; /* Darker color for author */
-}
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.prev {
-    left: 10px; /* Position left button */
-}
-
-.next {
-    right: 10px; /* Position right button */
-}
-
 .testimonial-container {
     position: relative;
-    max-width: 400px; /* Limit the width of the carousel */
-    margin: auto; /* Center the carousel */
-    overflow: hidden; /* Hide overflow */
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden; /* Hide overflow for carousel effect */
 }
 
 .testimonial-carousel {
     display: flex;
-    transition: transform 0.5s ease; /* Smooth transition */
+    transition: transform 0.5s ease;
 }
 
 .testimonial-card {
-    min-width: 100%; /* Make each card take full width */
-    box-sizing: border-box; /* Include padding and border in width */
-    padding: 20px; /* Padding inside the card */
-    text-align: center; /* Center text */
+    min-width: 100%; /* Full width for each card */
+    padding: 20px;
+    background-color: #fff; /* Card background */
+    border: 1px solid #ddd; /* Border for card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center;
+    opacity: 0.8; /* Slight transparency */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    opacity: 1; /* Full opacity on hover */
 }
 
 .testimonial-text {
-    font-size: 16px; /* Font size for the testimonial text */
-    margin-bottom: 10px; /* Space below the text */
-    font-style: italic; /* Italicize the testimonial text */
+    font-style: italic;
+    margin: 10px 0;
 }
 
 .testimonial-author {
-    font-weight: bold; /* Bold the author's name */
-    color: #555; /* Darker color for author */
+    font-weight: bold;
 }
 
-button {
+button.prev,
+button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
     border-radius: 50%;
-    cursor: pointer;
     padding: 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.prev {
-    left: 10px; /* Position left button */
+button.prev {
+    left: 10px;
 }
 
-.next {
-    right: 10px; /* Position right button */
+button.next {
+    right: 10px;
 }
 
+  
 
