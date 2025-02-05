@@ -259,63 +259,40 @@ hr {
 
   
 .testimonial-container {
-    position: relative;
-    max-width: 800px; /* Adjust as needed */
-    margin: auto;
-    overflow: hidden; /* Hide overflow for carousel effect */
-}
-
-.testimonial-carousel {
     display: flex;
-    transition: transform 0.5s ease;
+    flex-direction: column; /* Arrange cards in a column */
+    align-items: center; /* Center cards in the container */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
 }
 
 .testimonial-card {
-    min-width: 100%; /* Full width for each card */
-    padding: 20px;
-    background-color: #fff; /* Card background */
-    border: 1px solid #ddd; /* Border for card */
+    background: #c0c0c0; /* Card background */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    text-align: center;
-    opacity: 0.8; /* Slight transparency */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px; /* Inner padding */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width for larger screens */
 }
 
 .testimonial-card:hover {
-    transform: scale(1.05); /* Scale up on hover */
-    opacity: 1; /* Full opacity on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
 .testimonial-text {
-    font-style: italic;
-    margin: 10px 0;
+    font-size: 1.5rem; /* Adjust size as needed */
+    margin: 0; /* Remove default margin */
 }
 
 .testimonial-author {
-    font-weight: bold;
+    font-weight: bold; /* Bold author name */
+    text-align: right; /* Align author to the right */
+    margin-top: 10px; /* Space above author name */
 }
 
-button.prev,
-button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
+.construction_picture{
+    background-image: url(/assets/images/string.png);
+    background-size: cover;
 }
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
-}
-
-  
-
