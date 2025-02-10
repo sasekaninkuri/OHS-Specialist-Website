@@ -6,7 +6,6 @@
 
 .nav-link:hover {
     color: #e2e8ef; /* Hover text color */
-    background-color: #9be 1ef; /* Background color on hover */
     border-radius: 20%; /* Rounded corners on hover */
 }
 
