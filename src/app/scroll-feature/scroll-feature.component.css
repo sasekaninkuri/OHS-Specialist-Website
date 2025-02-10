@@ -1,10 +1,4 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-   
-}
+
 
 
 .picture{
@@ -388,7 +382,7 @@ hr {
 }
 
 .social-icons a.email {
-    color: #d44638; /* Email color */
+    color: #ece8e8; /* Email color */
 }
 
 .social-icons a.whatsapp {
