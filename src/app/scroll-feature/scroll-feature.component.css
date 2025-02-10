@@ -185,17 +185,14 @@ input[type="text"], input[type="email"], select, textarea {
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
     resize: vertical; /* Allow vertical resize for textarea */
 }
 
 /* Style the submit button */
 input[type="submit"] {
-        background-color: #3674B5;
+    background-color: #3674B5;
     color: white; /* Button text color */
-    padding: 12px 20px; /* Button padding */
+    padding: 12px;
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
