@@ -11,7 +11,7 @@ export class NavComponent {
   home= 'Home'
 
   navbarpro = [
-    'OHS SPECIALIST','HOME' , 'About' , 'Services' , 'Contct', 'Testimonial' , 'FAQ'
+    'HOME' , 'About' , 'Services' , 'Contct', 'Testimonial' , 'FAQ'
   ]
 
 }
