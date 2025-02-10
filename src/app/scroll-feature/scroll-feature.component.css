@@ -193,7 +193,8 @@ input[type="text"], input[type="email"], select, textarea {
 
 /* Style the submit button */
 input[type="submit"] {
-    background-color: #04AA6D; /* Button background color */
+    background-color: #3674B5;
+
     color: white; /* Button text color */
     padding: 12px 20px; /* Button padding */
     border: none; /* No border */
@@ -202,10 +203,7 @@ input[type="submit"] {
     width: 100%; /* Full width for button */
 }
 
-/* Submit button hover effect */
-input[type="submit"]:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
+
 
 /* Add a background color and some padding around the form */
 .container_after {
@@ -213,8 +211,9 @@ input[type="submit"]:hover {
     margin: 0 auto; /* Center the container */
     border-radius: 5px; /* Rounded corners */
     background-color: rgba(224, 224, 224, 0.5); /* Transparent background color */
-    padding: 20px; /* Padding around the form */
+    padding: 10px; /* Reduced padding for a smaller height */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 100px; /* Set a smaller minimum height */
 }
 
 /* Hover effect for the container */
@@ -232,16 +231,9 @@ input[type="submit"]:hover {
     text-align: center; /* Center the heading */
 }
 
-hr {
-    margin: 10px 0; /* Space around the horizontal rule */
-}
 
-.w3-image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 1000px; /* Limit height */
-    max-width: 1500px; /* Limit width */
-}
+
+
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
