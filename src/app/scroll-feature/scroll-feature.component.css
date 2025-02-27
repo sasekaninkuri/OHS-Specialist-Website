@@ -242,6 +242,7 @@ input[type="submit"] {
 
 
 
+
 /* Add a background color and some padding around the form */
 .container_after {
     max-width: 500px; /* Limit the max width of the form */
@@ -371,9 +372,12 @@ hr {
 /* Footer Styles */
 .footer-container {
     display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Space sections evenly */
-    background-color: #3674B5;
-    color: black; /* White text */
+    background-color: #578FCA; /* Navbar background color */
+    z-index: 1000; /* Ensure it stays above other content */
+
+
+   
+    color: black; /* Text color */
     padding: 20px; /* Padding for the footer */
 }
 
@@ -386,15 +390,13 @@ hr {
 }
 
 .contact-info {
-    background-color: #578FCA; /* Darker shade for contact info */
-}
-
-.contact-us {
-    background-color: #578FCA; /* Medium shade for contact us */
+    background-color: #578FCA; /* Navbar background color */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .social-media {
-    background-color: #578FCA /* Lighter shade for social media */
+    background-color: #578FCA; /* Lighter shade for social media */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .footer-section h2 {
@@ -463,3 +465,9 @@ hr {
 }
 
 
+.footer-copyright {
+    text-align: center; /* Center the copyright text */
+    background-color: #3674B5; /* Match the footer background */
+    color: white; /* White text for contrast */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
