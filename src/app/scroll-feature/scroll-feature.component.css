@@ -285,7 +285,8 @@ hr {
 @media (max-width: 500px) {
     .container {
         text-align: center;
-        margin: 16px; /* Use margin to center on smaller screens */
+       margin-left: auto;
+       margin-right: auto;
     }
 
     .container img {
