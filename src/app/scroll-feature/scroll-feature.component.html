@@ -151,35 +151,22 @@
             <label for="contact">Contact</label>
             <input type="text" id="contact" name="contact" placeholder="Contact..">
         
-            <label for="country">Country</label>
-            <select id="country" name="country" required>
-                <option value="">Select your country</option>
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                <option value="uk">United Kingdom</option>
-                <option value="germany">Germany</option>
-                <option value="france">France</option>
-                <option value="italy">Italy</option>
-                <option value="spain">Spain</option>
-                <option value="india">India</option>
-                <option value="china">China</option>
-                <option value="japan">Japan</option>
-                <option value="brazil">Brazil</option>
-                <option value="south_africa">South Africa</option>
-                <option value="mexico">Mexico</option>
-                <option value="new_zealand">New Zealand</option>
-                <option value="netherlands">Netherlands</option>
-                <option value="sweden">Sweden</option>
-                <option value="norway">Norway</option>
-                <option value="switzerland">Switzerland</option>
-                <option value="singapore">Singapore</option>
-                <option value="malaysia">Malaysia</option>
-                <option value="philippines">Philippines</option>
-            </select>
+            <label for="province">Provinces</label>
+<select id="province" name="province" required>
+    <option value="">Select your province</option>
+    <option value="kwazulu-natal">Kwazulu-Natal</option>
+    <option value="gauteng">Gauteng</option>
+    <option value="western-cape">Western Cape</option>
+    <option value="eastern-cape">Eastern Cape</option>
+    <option value="mpumalanga">Mpumalanga</option>
+    <option value="limpopo">Limpopo</option>
+    <option value="free-state">Free State</option>
+    <option value="northern-cape">Northern Cape</option>
+    <option value="north-west">North West</option>
+</select>
         
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Write message.." style="height:200px"></textarea>
         
             <input  type="submit" value="Submit">
         </form>
@@ -221,10 +208,12 @@
 
 
 <div class="map-container">
+    <div class="overlay"></div>
     <iframe 
         src="https://maps.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1117055555257!2d28.0634098!3d-25.6114908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfd1b51c8b49db%3A0x35bb5e25fdd87ec3!2s3049%20Magnetite%20St%2C%20Rosslyn%2C%20Pretoria%2C%200157!5e0!3m2!1sen!2sza!4v1615204399442!5m2!1sen!2sza" 
         allowfullscreen="" 
-        loading="lazy">
+        loading="fast"
+        tabindex="-1">
     </iframe>
 </div>
 
@@ -254,7 +243,7 @@
 
 <div class="footer-container">
     <div class="footer-section contact-info">
-        <h2 class="fetch_info"></h2>
+        <h2 class="fetch_info">FOLLOW US</h2>
         <p>If you have an idea,</p>
         <p>What are you waiting for?</p>
         <p>As an OHS Specialist, we are committed to promoting a safe and healthy work environment. Our role involves identifying potential hazards, conducting risk assessments, and implementing effective safety programs. Let's work together to ensure the well-being of everyone in the workplace.</p>
@@ -268,53 +257,18 @@
         </div>
     </div>
 </div>
+
+
 <div class="footer-copyright">
-    <p>&copy; 2025 HulahulaOHS. All Rights Reserved.</p>
+    <p>&copy; 2020 HulahulaOHS. All Rights Reserved.</p>
+    <div class="underline">
+
+</div>
+</div>
+
+    
 
 
-    <div class="chat-icon" onclick="toggleChat()">
-        💬
-    </div>
-    
-    <div class="chat-container" id="chatContainer">
-        <div class="chat-box" id="chatBox"></div>
-        <div class="input-container">
-            <input type="text" id="userInput" placeholder="Type your message..." />
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
-    
-    <script>
-        function toggleChat() {
-            const chatContainer = document.getElementById('chatContainer');
-            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
-        }
-    
-        function sendMessage() {
-            const input = document.getElementById('userInput');
-            const messageText = input.value.trim();
-    
-            if (messageText) {
-                appendMessage('user', messageText);
-                input.value = '';
-    
-                // Simulate AI response
-                setTimeout(() => {
-                    const aiResponse = "I'm here to help with safety and health questions!";
-                    appendMessage('ai', aiResponse);
-                }, 1000);
-            }
-        }
-    
-        function appendMessage(sender, text) {
-            const chatBox = document.getElementById('chatBox');
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message', sender);
-            messageDiv.innerHTML = `<p>${text}</p>`;
-            chatBox.appendChild(messageDiv);
-            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
-        }
-    </script>
     
 
     
@@ -322,5 +276,5 @@
     
 
     
-   
+
 
