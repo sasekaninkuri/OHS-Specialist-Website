@@ -254,22 +254,73 @@
 
 <div class="footer-container">
     <div class="footer-section contact-info">
-        <h2 class="fetch_info">Contact Us</h2>
+        <h2 class="fetch_info"></h2>
         <p>If you have an idea,</p>
         <p>What are you waiting for?</p>
         <p>As an OHS Specialist, we are committed to promoting a safe and healthy work environment. Our role involves identifying potential hazards, conducting risk assessments, and implementing effective safety programs. Let's work together to ensure the well-being of everyone in the workplace.</p>
     </div>
     <div class="footer-section social-media">
-        <h2 class="fetch_info">Follow Us</h2>
+        <h2 class="fetch_info">Contact Us</h2>
         <div class="social-icons">
             <a href="mailto:themba02@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
             <a href="https://wa.me/+27781540075" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+            
         </div>
     </div>
 </div>
 <div class="footer-copyright">
     <p>&copy; 2025 HulahulaOHS. All Rights Reserved.</p>
-</div>
-   
+
+
+    <div class="chat-icon" onclick="toggleChat()">
+        💬
+    </div>
+    
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+    <script>
+        function toggleChat() {
+            const chatContainer = document.getElementById('chatContainer');
+            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+        }
+    
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const messageText = input.value.trim();
+    
+            if (messageText) {
+                appendMessage('user', messageText);
+                input.value = '';
+    
+                // Simulate AI response
+                setTimeout(() => {
+                    const aiResponse = "I'm here to help with safety and health questions!";
+                    appendMessage('ai', aiResponse);
+                }, 1000);
+            }
+        }
+    
+        function appendMessage(sender, text) {
+            const chatBox = document.getElementById('chatBox');
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender);
+            messageDiv.innerHTML = `<p>${text}</p>`;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+    </script>
+    
+
+    
+    
+    
+
+    
    
 
