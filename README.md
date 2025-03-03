@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SPECIALISTWEBSITE
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# OHS-Specialist-Website
+>>>>>>> ca79578837825422a1b9b9da3139b2243d67d271
