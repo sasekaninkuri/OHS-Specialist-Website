@@ -1,0 +1,67 @@
+
+
+.nav-link {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: #e2e8ef; /* Hover text color */
+    border-radius: 20%; /* Rounded corners on hover */
+}
+
+.btn-outline-success {
+    color: #fff; /* Button text color */
+    border-color: #fff; /* Button border color */
+}
+
+.btn-outline-success:hover {
+    background-color: #9be1ef; /* Button background on hover */
+    border-color: #9be1ef; /* Button border on hover */
+}
+
+.w3-image {
+    
+    height: 50px; /* Maintains aspect ratio */
+}
+
+
+
+
+
+
+
+.navbar {
+    background-color: #578FCA; /* Navbar background color */
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    width: 100%; /* Full width */
+}
+.nav-link {
+    color: white; /* Link color */
+   font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #f39c12; /* Hover color for links */
+}
+
+
+
+.logo {
+    width: 80px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and links */
+    border-radius: 5%;
+    margin-left: 9px;
+    object-fit: cover;
+   
+ 
+}
+
+/* Optional: make the navbar responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px; /* Adjust logo size for smaller screens */
+    }
+}

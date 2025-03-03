@@ -1,0 +1,481 @@
+
+
+
+.picture{
+    background-color: #3674B5;
+}
+
+
+@keyframes easeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.animated-title {
+    animation: easeInOut 10s ease-in-out infinite; /* Animation takes 10 seconds */
+}
+
+.image-container {
+    position: relative; /* Position relative for absolute positioning of text */
+    max-width: 1500px; /* Limit container width */
+    width: 100%; /* Ensure the container takes full width */
+    overflow: hidden; /* Prevent overflow if image exceeds container */
+}
+
+.w3-image {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: none; /* Remove height limitation to show the full image */
+    display: block; /* Prevents bottom space caused by inline images */
+    object-fit: fill; /* Fill the container without preserving aspect ratio */
+}
+
+.text_hulula {
+    color: black;
+    font-size: 8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+}
+
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .text_hulula {
+        font-size: 5rem; /* Adjust size for tablets */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .text_hulula {
+        font-size: 3rem; /* Adjust size for mobile phones */
+        padding: 0 10px; /* Add padding for better fit */
+    }
+}
+
+/* Optional: For very small screens */
+@media (max-width: 320px) {
+    .text_hulula {
+        font-size: 2rem; /* Further reduce size for very small screens */
+    }
+}
+
+
+.overlay-text {
+    position: absolute; /* Position text absolutely within the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    text-align: center; /* Center text alignment */
+    color: white; /* Text color */
+   
+}
+
+/* Optional: Adjust for mobile devices */
+@media (max-width: 768px) {
+    .overlay-text h1 {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+}
+
+
+
+
+/* Container that holds the flip cards */
+.flip-card-container {
+    display: flex;
+    justify-content: center; /* Centering flip cards */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Each flip card */
+.flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Add perspective for the 3D effect */
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    margin: 10px;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+
+/* The inner wrapper for the flip effect */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Preserve 3D space */
+    transition: transform 0.6s; /* Flip transition */
+}
+
+/* Front face of the card */
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when flipped */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.flip-card-front:hover img {
+    transform: scale(1.1); /* Scale image on hover for a zoom effect */
+}
+
+.card-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.card-info h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.card-info p {
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+/* Back face of the card */
+.flip-card-back {
+
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the front when flipped */
+    background-color: #fff;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg); /* Flip to the back */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    box-sizing: border-box; /* Include padding and borders in width/height calculation */
+    overflow: hidden; /* Prevent text overflow */
+}
+
+/* Heading Style inside the back face */
+.flip-card-back h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Center align text */
+    margin: 50px;
+    padding: 10px 0; /* Spacing for better text alignment */
+    text-transform: uppercase;
+}
+
+/* Paragraph Style inside the back face */
+.flip-card-back p {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Hover effect for flipping the card */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flip the card */
+}
+
+
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    resize: vertical; /* Allow vertical resize for textarea */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #3674B5;
+    color: white; /* Button text color */
+    padding: 12px;
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width for button */
+}
+
+
+
+
+/* Add a background color and some padding around the form */
+.container_after {
+    max-width: 500px; /* Limit the max width of the form */
+    margin: 0 auto; /* Center the container */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(224, 224, 224, 0.5); /* Transparent background color */
+    padding: 20px; /* Padding around the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover effect for the container */
+.container_after:hover {
+    transform: scale(1.02); /* Slightly scale up the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition effect */
+}
+
+
+
+
+/* Heading styles */
+.names {
+    text-align: center; /* Center the heading */
+}
+
+hr {
+    margin: 10px 0; /* Space around the horizontal rule */
+}
+
+.w3-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 1000px; /* Limit height */
+    max-width: 1500px; /* Limit width */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .w3-image {
+        max-height: 500px; /* Adjust height for mobile devices */
+    }
+}
+
+.container_testimony {
+    background-color: #578FCA; /* Lighter shade for social media */
+    padding: 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 16px auto; /* Center the container */
+    max-width: 600px; /* Set a maximum width */
+}
+
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 16px auto; /* Center the container horizontally */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fetch_info{
+    font-weight: bold;
+}
+
+/* Clear floats after containers */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.container span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+    .container {
+        text-align: center;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
+
+
+
+/* Style for the container */
+.center-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+}
+
+/* Your existing heading styles */
+.section_about {
+    text-align: center; /* Center the text */
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    margin: 20px 0; /* Add some vertical spacing */
+    color: transparent; /* Make text color transparent */
+    background: linear-gradient(45deg, #4caf50, #f44336); /* Gradient background */
+    background-clip: text; /* Clip background to text */
+    -webkit-background-clip: text; /* For Safari */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    padding: 10px; /* Add padding for a better look */
+    border-radius: 5px; /* Slightly round the corners */
+    display: inline-block; /* Make the element fit its content */
+}
+
+
+/* Footer Styles */
+.footer-container {
+    display: flex; /* Flexbox layout */
+    background-color: #578FCA; /* Navbar background color */
+    z-index: 1000; /* Ensure it stays above other content */
+
+
+   
+    color: black; /* Text color */
+    padding: 20px; /* Padding for the footer */
+}
+
+.footer-section {
+    flex: 1; /* Each section takes equal space */
+    padding: 20px; /* Padding inside each section */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    margin: 0 10px; /* Margin between sections */
+}
+
+.contact-info {
+    background-color: #578FCA; /* Navbar background color */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.social-media {
+    background-color: #578FCA; /* Lighter shade for social media */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.footer-section h2 {
+    margin-bottom: 15px; /* Space below heading */
+    font-size: 1.5rem; /* Heading size */
+}
+
+.footer-section p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.footer-section i {
+    font-size: 1.5rem; /* Icon size */
+    margin: 0 10px; /* Space between icons */
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex; /* Flexbox for icons */
+    justify-content: center; /* Center icons */
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem; /* Icon size */
+}
+
+/* Specific Colors for Icons */
+.social-icons a.facebook {
+    color: #3b5998; /* Facebook color */
+}
+
+.social-icons a.email {
+    color: #ece8e8; /* Email color */
+}
+
+.social-icons a.whatsapp {
+    color: #25D366; /* WhatsApp color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Space below sections */
+        width: 90%; /* Full width for mobile */
+    }
+}
+.footer-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the sections */
+    padding: 20px; /* Add some padding */
+}
+
+.footer-section {
+    flex: 1; /* Allow sections to flexibly take up space */
+    margin: 0 10px; /* Add some margin between sections */
+    background: none; /* Remove any background or card-like styles */
+    box-shadow: none; /* Remove shadows */
+}
+
+
+.footer-copyright {
+    text-align: center; /* Center the copyright text */
+    background-color: #3674B5; /* Match the footer background */
+    color: white; /* White text for contrast */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+
+.underline {
+    width: 100%; /* Adjust to desired width */
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    margin: 0; /* Space above and below */
+}
